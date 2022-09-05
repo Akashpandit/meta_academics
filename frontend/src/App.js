@@ -4,6 +4,7 @@ import React from 'react';
 import AuthLogin from './components/AuthLogin';
 import AdminHome from './components/adminPages/AdminHome';
 import AddEvent from './components/adminPages/AddEvent';
+import AddAchiever from './components/adminPages/AddAchiever';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/admin/login' element={<AuthLogin />} />
           <Route path='/admin/home' element={<AdminHome />} />
           <Route path='/admin/events/add' element={<AddEvent />} />
+          <Route path='/admin/events/addachiever' element={<AddAchiever />} />
         </Routes>
       </main>
     </React.Fragment>

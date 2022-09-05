@@ -5,21 +5,19 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
 
-
-
-const AddEvent = () => {
-
+const AddAchiever = () => {
     const navigate = useNavigate();
+
     const [inputs, setInputs] = useState({
-        name: "",
-        startDate: "",
-        endDate: "",
-        time: "",
-        description: "",
-        poster: "",
-        venue: "",
-        registrationLink: "",
-        meetingLink: ""
+        winner: "",
+        winnerBatch: "",
+        runnerUp: "",
+        runnerUpBatch: "",
+        secondRunnerUp: "",
+        secondRunnerUpBatch: "",
+        achieverImg: ""
+
+
     })
     const handleChange = (e) => {
         setInputs((prevState) => ({
@@ -30,17 +28,16 @@ const AddEvent = () => {
 
     const sendRequest = async () => {
         const res = await axios
-            .post(`${process.env.REACT_APP_BASEURL}/api/event/addevent`, {
-                name: inputs.name,
-                startDate: inputs.startDate,
-                endDate: inputs.endDate,
-                time: inputs.time,
-                description: inputs.description,
-                poster: "https://drive.google.com/uc?export=view&id=" + inputs.poster,
-                venue: inputs.venue,
-                registrationLink: inputs.registrationLink,
-                meetingLink: inputs.meetingLink,
-                user: localStorage.getItem("userId")
+            .post(`${process.env.REACT_APP_BASEURL}/api/achiever/addachiever`, {
+                winner: inputs.winner,
+                winnerBatch: inputs.winnerBatch,
+                runnerUp: inputs.runnerUp,
+                runnerUpBatch: inputs.runnerUpBatch,
+                secondRunnerUp: inputs.secondRunnerUp,
+                secondRunnerUpBatch: inputs.secondRunnerUpBatch,
+                achieverImg: "https://drive.google.com/uc?export=view&id=" + inputs.achieverImg,
+                event: localStorage.getItem("eventId")
+
             })
             .catch((err) => console.log(err));
 
@@ -51,11 +48,11 @@ const AddEvent = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         sendRequest()
+            .then(() => navigate("/admin/home"))
             .then(() => {
-
-                navigate("/admin/home")
+                localStorage.removeItem("eventId")
+                localStorage.removeItem("eventName")
             })
-
     }
 
 
@@ -73,100 +70,96 @@ const AddEvent = () => {
                     marginTop={2}
                     marginBottom={2}
                 >
-                    <Typography variant='h5'>Add an Event</Typography>
-                    <InputLabel marginTop="1rem">Name:</InputLabel>
-                    <TextField
-                        name="name"
-                        variant="outlined"
-                        value={inputs.value}
-                        onChange={handleChange}
-                        required="true"
-                    />
-                    <div className='date_time_container'
-                        style={{ marginTop: "1rem", display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "space-between" }}
-                    >
-                        <div >
-                            <InputLabel marginTop="1rem">Start Date:</InputLabel>
-                            <TextField
-                                name="startDate"
-                                type="date"
-                                variant="outlined"
-                                value={inputs.value}
-                                onChange={handleChange}
-                                required="true"
-                            />
-                        </div>
-                        <div>
-                            <InputLabel >End Date:</InputLabel>
-                            <TextField
-                                name="endDate"
-                                type="date"
-                                variant="outlined"
-                                value={inputs.value}
-                                onChange={handleChange}
-                                required="true"
-                            />
-                        </div>
-                        <div>
-                            <InputLabel >Time:</InputLabel>
-                            <TextField
-                                name="time"
-                                type="time"
-                                variant="outlined"
-                                value={inputs.value}
-                                onChange={handleChange}
-                                required="true"
-                            />
-                        </div>
-                        <div >
-                            <InputLabel >Poster ID</InputLabel>
 
+                    <Typography variant='h5'>Add Achiever: {localStorage.getItem("eventName")}</Typography>
+                    <InputLabel style={{ marginTop: "1rem" }}><b>Winner</b></InputLabel>
+
+                    <div className="achiever_container" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                        <div>
                             <TextField
-                                name="poster"
+                                name="winner"
                                 variant="outlined"
+                                placeholder="Name"
                                 value={inputs.value}
                                 onChange={handleChange}
                                 required="true"
-                                multiline="true"
+
                             />
                         </div>
+
+                        <div>
+                            <TextField
+                                name="winnerBatch"
+                                variant="outlined"
+                                placeholder="Batch (Ex: 2019-2023)"
+                                value={inputs.value}
+                                onChange={handleChange}
+                                required="true"
+                            />
+                        </div>
+
                     </div>
-                    <InputLabel >About event:</InputLabel>
-                    <TextField
-                        name="description"
-                        variant="outlined"
-                        value={inputs.value}
-                        onChange={handleChange}
-                        required="true"
-                        multiline="true"
-                    />
+                    <InputLabel style={{ marginTop: "1rem" }} ><b>Runner Up</b></InputLabel>
 
-                    <InputLabel >Venue</InputLabel>
+                    <div className="achiever_container" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                        <div>
+                            <TextField
+                                name="runnerUp"
+                                variant="outlined"
+                                placeholder="Name"
+                                value={inputs.value}
+                                onChange={handleChange}
+                                required="true"
+
+                            />
+                        </div>
+
+                        <div>
+                            <TextField
+                                name="runnerUpBatch"
+                                variant="outlined"
+                                placeholder="Batch (Ex: 2019-2023)"
+                                value={inputs.value}
+                                onChange={handleChange}
+                                required="true"
+                            />
+                        </div>
+
+                    </div>
+                    <InputLabel style={{ marginTop: "1rem" }} ><b>Second Runner Up</b></InputLabel>
+
+                    <div className="achiever_container" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                        <div>
+                            <TextField
+                                name="secondRunnerUp"
+                                variant="outlined"
+                                placeholder="Name"
+                                value={inputs.value}
+                                onChange={handleChange}
+
+                            />
+                        </div>
+
+                        <div>
+                            <TextField
+                                name="secondRunnerUpBatch"
+                                variant="outlined"
+                                placeholder="Batch (Ex: 2019-2023)"
+                                value={inputs.value}
+                                onChange={handleChange}
+
+                            />
+                        </div>
+
+                    </div>
+                    <InputLabel style={{ marginTop: "1rem" }} ><b>Poster Id</b></InputLabel>
                     <TextField
-                        name="venue"
+                        name="achieverImg"
                         variant="outlined"
+                        placeholder="Google Drive poster Id"
                         value={inputs.value}
                         onChange={handleChange}
-                        required="true"
-                        multiline={true}
-                    />
-                    <InputLabel >Registration Link</InputLabel>
-                    <TextField
-                        name="registrationLink"
-                        variant="outlined"
-                        value={inputs.value}
-                        onChange={handleChange}
-                        required="true"
-                        multiline="true"
-                    />
-                    <InputLabel >Meeting Link</InputLabel>
-                    <TextField
-                        name="meetingLink"
-                        variant="outlined"
-                        value={inputs.value}
-                        onChange={handleChange}
-                        required="true"
-                        multiline="true"
+
                     />
                     <Box>
                         <Button
@@ -205,4 +198,4 @@ const AddEvent = () => {
     )
 }
 
-export default AddEvent
+export default AddAchiever

@@ -9,6 +9,11 @@ import { Button } from '@mui/material'
 const Event = ({ name, startDate, endDate, time, description, poster, venue, registrationLink, meetingLink, id }) => {
     const navigate = useNavigate();
 
+    const handleAdd = () => {
+        localStorage.setItem("eventId", id);
+        localStorage.setItem("eventName", name);
+        navigate(`/admin/events/addachiever/`);
+    }
     const handleEdit = () => {
         navigate(`/event/${id}`);
     }
@@ -59,7 +64,7 @@ const Event = ({ name, startDate, endDate, time, description, poster, venue, reg
                     <b>Meeting Link: </b>
                     {meetingLink}
                 </div>
-                <Button sx={{ borderRadius: 2 }} variant="contained" onClick={handleEdit} >Add Achiever</Button>
+                <Button sx={{ borderRadius: 2 }} variant="contained" onClick={handleAdd} >Add Achiever</Button>
                 <Button sx={{ borderRadius: 2, ml: 1 }} variant="outlined" color='warning' onClick={handleEdit} >Edit</Button>
                 <Button sx={{ borderRadius: 2, m: 1 }} variant="contained" color='error' onClick={handleDelete}>Delete </Button>
 
