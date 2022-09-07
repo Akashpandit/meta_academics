@@ -46,9 +46,15 @@ const EventEdit = () => {
             })
         })
     }, [])
+    const sendRequest = async () => {
+        const res = await axios
+            .put(${ process.env.REACT_APP_BASEURL } / api / payment / edit / ${ id }`)
 
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
+        sendRequest()
+            .then(()=>navigate("/admin/event"))
 
     }
 

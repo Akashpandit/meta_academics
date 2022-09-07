@@ -97,3 +97,9 @@ export const userEvents = async (req, res, next) => {
 
     return res.status(200).json({ user: userEvents });
 }
+
+
+export const editEvent = async (req, res, next) => {
+    const { name, startDate, endDate, time, description, poster, venue, registrationLink, meetingLink } = req.body;
+
+}
