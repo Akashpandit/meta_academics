@@ -5,8 +5,8 @@ import AuthLogin from './components/AuthLogin';
 import AdminHome from './components/adminPages/AdminHome';
 
 import Home from './components/home/Home.js';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 import AddEvent from './components/adminPages/AddEvent';
 import AddAchiever from './components/adminPages/AddAchiever';
