@@ -5,7 +5,7 @@ import User from '../model/User.js';
 
 export const addEvent = async (req, res, next) => {
 
-    const { name, startDate, endDate, time, description, poster, user } = req.body;
+    const { name, startDate, endDate, time, description, poster, venue, registrationLink, meetingLink, user } = req.body;
 
     let existingUser;
     try {
@@ -28,6 +28,9 @@ export const addEvent = async (req, res, next) => {
         time,
         description,
         poster,
+        venue,
+        registrationLink,
+        meetingLink,
         user,
         achievers: []
     });
@@ -78,4 +81,19 @@ export const getEventById = async (req, res, next) => {
     }
 
     return res.status(200).json({ event });
+}
+
+//getting all the events of logged in user
+
+export const userEvents = async (req, res, next) => {
+    const userId = req.params.id;
+    let userEvents;
+
+    try {
+        userEvents = await User.findById(userId).populate("events")
+    } catch (err) {
+        return res.status(404).json({ message: "No Events found." })
+    }
+
+    return res.status(200).json({ user: userEvents });
 }

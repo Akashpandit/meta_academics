@@ -24,12 +24,10 @@ const achieverSchema = new Schema({
 
     secondRunnerUp: {
         type: String,
-        required: true,
         trim: true
     },
     secondRunnerUpBatch: {
         type: String,
-        required: true,
     },
     achieverImg: {
         type: String
