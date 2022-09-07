@@ -16,6 +16,7 @@ import AboutUs from './components/home/AboutUs';
 
 import AddEvent from './components/adminPages/AddEvent';
 import AddAchiever from './components/adminPages/AddAchiever';
+import OurEvents from './components/home/OurEvents';
 
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='/admin/login' element={<AuthLogin />} />
           <Route path='/admin/home' element={<AdminHome />} />
           <Route path='/AboutUs' element={< AboutUs />} />
+          <Route path='/OurEvents' element={<OurEvents />} />
           <Route path='/admin/events/add' element={<AddEvent />} />
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
         </Routes >

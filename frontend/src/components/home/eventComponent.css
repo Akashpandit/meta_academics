@@ -1,0 +1,41 @@
+.our_event_container{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 0.5rem;
+    
+}
+.event_component_image{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.event_component_image img{
+    height: 300px;
+    object-fit: cover;
+}
+.our_event_content_container{
+    flex-grow: 1;
+}
+.event_title_container{
+    padding: 5px;	
+	transform: skew(-15deg);
+    color: white;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+	background: rgb(0, 63, 5);
+}
+.timing_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    padding-right:2rem ;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
