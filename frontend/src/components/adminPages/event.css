@@ -33,3 +33,18 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
+.event_title{
+    display: flex;
+   
+}
+
+.event_name_container{
+    flex-grow: 1;
+    font-size: 20px;
+}
+.event_status{
+    font-size: 20px;
+    font-weight: 500;
+     padding-right: 5px;
+    color: blue;
+}

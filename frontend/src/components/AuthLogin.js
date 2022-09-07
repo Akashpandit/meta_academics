@@ -51,8 +51,20 @@ const AuthLogin = () => {
     return (
         <div className='login_container'>
             <form onSubmit={handleSubmit}>
-                <Box>
-                    <Typography>Login</Typography>
+                <Box style={{
+                    margin: "0 auto",
+                    marginTop: "2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    maxWidth: "300px",
+                    gap: "1rem",
+                    boxShadow: "0px 1px 10px rgba(0,0,0,0.2)",
+                    padding: "1rem",
+                    borderRadius: "10px"
+                }}>
+                    <Typography variant='h4' >Login</Typography>
+                    <hr color='green' width="40px" />
                     <TextField
                         type={"text"}
                         name="email"
@@ -69,7 +81,7 @@ const AuthLogin = () => {
                         onChange={handleChange}
 
                     />
-                    <Button type="submit" variant='contained' sx={{ borderRadius: 2, marginTop: 3, backgroundColor: "#0000ff" }}>Login</Button>
+                    <Button type="submit" variant='contained' sx={{ borderRadius: 2, marginTop: 3, backgroundColor: "green", width: "max-content" }}>Login</Button>
 
                 </Box>
             </form>

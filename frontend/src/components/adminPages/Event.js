@@ -18,14 +18,28 @@ const Event = ({ name, startDate, endDate, time, description, poster, venue, reg
         navigate(`/event/${id}`);
     }
     const handleDelete = () => { }
+
+    //checking for ongoing or past event
+    function isActive(endDate) {
+        const currDate = new Date();
+        const d = new Date(endDate);
+        if (currDate > d) {
+            return false
+        } else {
+            return true
+        }
+    }
     function formatDate(date) {
         let datestr = date + "";
         datestr = datestr.substring(0, 10);
         //getting the day
         const d = new Date(date);
+
+
         let dayToday = d.getDay();
         const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         datestr += " ( " + weekday[dayToday] + " ) ";
+
         return datestr;
     }
     return (
@@ -36,12 +50,16 @@ const Event = ({ name, startDate, endDate, time, description, poster, venue, reg
             <div className="event_content_container">
 
                 <div className="event_title">
-                    <br />
-                    Event Name:
-                    <b>
+                    <div className='event_name_container'>
 
-                        {name}
-                    </b>
+
+                        <b>
+                            {name}
+                        </b>
+                    </div>
+                    <div className='event_status'>
+                        {isActive(endDate) ? "Ongoing" : "Past Event"}
+                    </div>
                 </div>
                 <div className="event_time_and_date_container">
                     <div>Start Date: {formatDate(startDate)}</div>
