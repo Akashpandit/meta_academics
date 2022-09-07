@@ -6,6 +6,8 @@ import AdminHome from './components/adminPages/AdminHome';
 import Home from './components/home/Home.js';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import AboutUs from './components/home/AboutUs';
 
 
 function App() {
@@ -17,11 +19,10 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path='/' element={
-            <Home />
-          } />
+          <Route path='/' element={<Home />} />
           <Route path='/admin/login' element={<AuthLogin />} />
           <Route path='/admin/home' element={<AdminHome />} />
+          <Route path='/AboutUs' element={< AboutUs />} />
         </Routes>
       </main>
     </React.Fragment>

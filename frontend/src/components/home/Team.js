@@ -53,7 +53,7 @@ const Team = () => {
                     <div className='container' key={index}>
                         <div className={item.cardClasses}>
                             <div className="border">
-                            <h2>{item.name}</h2>
+                            <h2 className='teams-h2'>{item.name}</h2>
                             <div class="icons">
                                 <FaCodepen></FaCodepen>
                                 <FaInstagram></FaInstagram>

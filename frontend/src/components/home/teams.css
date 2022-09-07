@@ -111,7 +111,7 @@
   .card2:hover .fa {
     opacity: 1;
   }
-  h2 {
+  .teams-h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #fff;
     margin: 20px;
