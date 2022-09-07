@@ -3,8 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import AuthLogin from './components/AuthLogin';
 import AdminHome from './components/adminPages/AdminHome';
+
+import Home from './components/home/Home.js';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import AddEvent from './components/adminPages/AddEvent';
 import AddAchiever from './components/adminPages/AddAchiever';
+
 
 
 function App() {
@@ -17,9 +23,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={
-            <div className="App">
-              Hello, Arpita and Akash!
-            </div>
+            <Home />
           } />
           <Route path='/admin/login' element={<AuthLogin />} />
           <Route path='/admin/home' element={<AdminHome />} />
