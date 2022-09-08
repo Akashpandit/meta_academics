@@ -17,6 +17,7 @@ import AboutUs from './components/home/AboutUs';
 import AddEvent from './components/adminPages/AddEvent';
 import AddAchiever from './components/adminPages/AddAchiever';
 import OurEvents from './components/home/OurEvents';
+import EventDetail from './components/home/EventDetail';
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/admin/home' element={<AdminHome />} />
           <Route path='/AboutUs' element={< AboutUs />} />
           <Route path='/OurEvents' element={<OurEvents />} />
+          <Route path='/eventdetail' element={<EventDetail />} />
           <Route path='/admin/events/add' element={<AddEvent />} />
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
         </Routes >
