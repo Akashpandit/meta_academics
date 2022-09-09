@@ -15,7 +15,7 @@ const Event = ({ name, startDate, endDate, time, description, poster, venue, reg
         navigate(`/admin/events/addachiever/`);
     }
     const handleEdit = () => {
-        navigate(`/event/${id}`);
+        navigate(`/admin/events/edit/${id}`);
     }
     const handleDelete = () => { }
     function formatDate(date) {

@@ -18,6 +18,7 @@ import AddEvent from './components/adminPages/AddEvent';
 import AddAchiever from './components/adminPages/AddAchiever';
 import OurEvents from './components/home/OurEvents';
 import EventDetail from './components/home/EventDetail';
+import EventEdit from './components/adminPages/EventEdit';
 
 
 
@@ -38,6 +39,7 @@ function App() {
           <Route path='/eventdetail' element={<EventDetail />} />
           <Route path='/admin/events/add' element={<AddEvent />} />
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
+          <Route path='/admin/events/edit/:id' element={<EventEdit />} />
         </Routes >
       </main >
     </React.Fragment >

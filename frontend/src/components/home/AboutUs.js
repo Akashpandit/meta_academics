@@ -81,7 +81,9 @@ const AboutUs = () => {
                     <div class="description">
                         <h1>Our First Event</h1>
                         <h2>Java is not the same as JavaScript</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ad eum dolorum architecto obcaecati enim dicta praesentium,
+                            quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
                         {/* <p class="read-more">
                         <a href="fdvsdv">Read More</a>
                     </p> */}
@@ -89,7 +91,12 @@ const AboutUs = () => {
                 </div>
                 <div class="blog-card">
                     <div class="meta">
-                        <div class="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)" }}></div>
+                        <div class="photo" style={{
+                            backgroundImage:
+                                "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"
+                        }}
+                        >
+                        </div>
                         <ul class="details">
                             <li class="author"><a href="jfbjds">John Doe</a></li>
                             <li class="date">Aug. 24, 2015</li>

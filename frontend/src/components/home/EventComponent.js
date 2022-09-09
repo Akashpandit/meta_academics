@@ -61,7 +61,10 @@ const EventComponent = ({ name, startDate, endDate, time, description, poster, v
                 <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' onClick={() => window.open(registrationLink, "_blank")}  >Register</Button>
                 <Link to={"/eventdetail"} style={{ textDecoration: "none" }}>
 
-                    <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' >Know More</Button>
+                    <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' onClick={() => {
+                        localStorage.setItem("eventName", name)
+                        localStorage.setItem("eventId", id)
+                    }} >Know More</Button>
                 </Link>
             </div>
         </div>
