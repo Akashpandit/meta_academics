@@ -3,6 +3,7 @@ import './aboutUs.css';
 import Navbar from './Navbar.js';
 import './aboutUs2.css'
 import imageLeft from './public_Speaking3.jpeg';
+import AllTeam from './AllTeam';
 
 
 const AboutUs = () => {
@@ -174,7 +175,18 @@ const AboutUs = () => {
 
 
         </div>
+<<<<<<< HEAD
+        <div className='row4-container'>
+            <h1>HEY</h1>
+            <AllTeam />
+        </div>
+                        
+  
+    </div>
+  )
+=======
     )
+>>>>>>> 95b7f0d2b87fc616a94a21e0a7a7ce5defe70225
 }
 
 export default AboutUs

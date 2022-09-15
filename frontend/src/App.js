@@ -35,6 +35,13 @@ function App() {
           <Route path='/admin/login' element={<AuthLogin />} />
           <Route path='/admin/home' element={<AdminHome />} />
           <Route path='/AboutUs' element={< AboutUs />} />
+<<<<<<< HEAD
+          <Route path='/admin/events/add' element={<AddEvent />} />
+          <Route path='/admin/events/addachiever' element={<AddAchiever />} />
+        </Routes>
+      </main>
+    </React.Fragment>
+=======
           <Route path='/OurEvents' element={<OurEvents />} />
           <Route path='/eventdetail' element={<EventDetail />} />
           <Route path='/admin/events/add' element={<AddEvent />} />
@@ -43,6 +50,7 @@ function App() {
         </Routes >
       </main >
     </React.Fragment >
+>>>>>>> 95b7f0d2b87fc616a94a21e0a7a7ce5defe70225
 
 
   );

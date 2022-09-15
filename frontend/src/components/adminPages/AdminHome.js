@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 import './adminhome.css'
 import Events from './Events'
 import { Box, Typography, Button } from '@mui/material'
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 95b7f0d2b87fc616a94a21e0a7a7ce5defe70225
 import Event from './Event'
 
 const AdminHome = () => {
