@@ -27,12 +27,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/admin/login' element={<AuthLogin />} />
           <Route path='/admin/home' element={<AdminHome />} />
-<<<<<<< HEAD
           <Route path='/AboutUs' element={< AboutUs />} />
-=======
           <Route path='/admin/events/add' element={<AddEvent />} />
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
->>>>>>> 2976efe596ecf6c5e0706c0abc0f19ac533f3961
         </Routes>
       </main>
     </React.Fragment>

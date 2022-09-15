@@ -3,6 +3,7 @@ import './aboutUs.css';
 import Navbar from './Navbar.js';
 import './aboutUs2.css'
 import imageLeft from './public_Speaking3.jpeg';
+import AllTeam from './AllTeam';
 
 
 const AboutUs = () => {
@@ -163,6 +164,10 @@ const AboutUs = () => {
             </div>
 
         
+        </div>
+        <div className='row4-container'>
+            <h1>HEY</h1>
+            <AllTeam />
         </div>
                         
   
