@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { authActions } from '../store/Index.js';
 import { Box, Typography, Button, TextField } from '@mui/material';
+import './authLogin.css'
+
 
 const AuthLogin = () => {
 
@@ -51,8 +53,10 @@ const AuthLogin = () => {
     return (
         <div className='login_container'>
             <form onSubmit={handleSubmit}>
-                <Box>
-                    <Typography>Login</Typography>
+                <Box display={"flex"} flexDirection="column"
+                    gap={1}
+                >
+                    <Typography textAlign={"center"} variant="h5">Login</Typography>
                     <TextField
                         type={"text"}
                         name="email"
@@ -69,7 +73,7 @@ const AuthLogin = () => {
                         onChange={handleChange}
 
                     />
-                    <Button type="submit" variant='contained' sx={{ borderRadius: 2, marginTop: 3, backgroundColor: "#0000ff" }}>Login</Button>
+                    <Button type="submit" variant='contained' sx={{ borderRadius: 2, marginTop: 3, backgroundColor: "#0000ff", width: "max-content", }}>Login</Button>
 
                 </Box>
             </form>
