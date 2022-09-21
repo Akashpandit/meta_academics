@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import EventComponent from './EventComponent';
-import Navbar from './Navbar';
 import axios from 'axios';
 import { useEffect } from 'react';
 const OurEvents = () => {
@@ -15,19 +14,22 @@ const OurEvents = () => {
         const data = await res.data;
         return data;
     }
-
     useEffect(() => {
         sendRequest().then((data) => setEvents(data.events))
     }, [])
 
-    return (
-        <div className='our_events_outer_container'>
-            <div class="header">
-                <Navbar />
+    return (<>
+
+        <div className='our_events_outer_container'
+            style={{ display: "flex", flexDirection: "column" }}>
+            <div className="header" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <h1></h1>
                 <h1 style={{ color: 'white' }}>OUR EVENTS</h1>
-                <p style={{ color: 'whitesmoke' }}>we organize following events  <br /> To know more about our events, scroll down.</p><br /><br />
-
+                <p style={{ color: 'whitesmoke' }}>
+                    we organize following events
+                    <br />
+                    To know more about our events, scroll down.
+                </p>
             </div>
             <div className="events_container" style={{ backgroundColor: "rgb(8, 59, 58)" }}>
 
@@ -47,10 +49,11 @@ const OurEvents = () => {
                             meetingLink={event.meetingLink}
 
 
-                        />))}
+                        />)).reverse()}
             </div>
 
         </div>
+    </>
     )
 }
 

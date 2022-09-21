@@ -19,6 +19,7 @@ import AddAchiever from './components/adminPages/AddAchiever';
 import OurEvents from './components/home/OurEvents';
 import EventDetail from './components/home/EventDetail';
 import EventEdit from './components/adminPages/EventEdit';
+import Navbar from './components/home/Navbar';
 
 
 
@@ -27,7 +28,7 @@ function App() {
 
     <React.Fragment>
       <header>
-        {/* navbar goes here */}
+        <Navbar />
       </header>
       <main>
         <Routes>

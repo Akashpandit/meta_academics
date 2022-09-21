@@ -11,7 +11,6 @@ const AboutUs = () => {
         <div className='about-body'>
 
             <div class="header">
-                <Navbar />
                 <h1 style={{ color: 'white' }}>OUR STORY</h1>
                 <h1 style={{ color: 'white' }}>META ACADEMICS CELL</h1>
 
