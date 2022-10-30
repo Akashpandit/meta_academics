@@ -30,64 +30,66 @@ const AchieverComponent = ({ id }) => {
                     <div className="achiever_detail_container"
                         style={{
                             display: "flex",
-                            gap: "0.5rem",
+                            gap: "2rem",
                             flexWrap: "wrap",
-                            justifyContent: "center"
 
+                            justifyContent: 'flex-start',
+                            alignItems: 'center'
                         }}>
-                        <div className="image_container">
-                            <img src={achiever.achieverImg} alt="" style={{ maxWidth: "90vw", borderRadius: "10px" }} />
+                        <div className="achiever-image-container">
+                            <img src={achiever.achieverImg} alt="" />
                         </div>
-
-                        <div className="outer">
-                            <div className="position_col"><GiPodiumWinner size={"50px"} /></div>
-                            <div className="name_col">
-                                <div>
-                                    {achiever.winner}
-                                </div>
-                                <div style={{ fontSize: "12px" }}>
-
-                                    {achiever.winnerBatch}
-                                </div>
-
-                            </div>
-                            <div className="shape_1"></div>
-                        </div>
-                        {achiever.runnerUp === '' ? ("") : (
+                        <div>
                             <div className="outer">
-                                <div className="position_col"><GiPodiumSecond size={"50px"} /></div>
+                                <div className="position_col"><GiPodiumWinner size={"50px"} /></div>
                                 <div className="name_col">
                                     <div>
-
-                                        {achiever.runnerUp}
+                                        {achiever.winner}
                                     </div>
                                     <div style={{ fontSize: "12px" }}>
 
-
-                                        {achiever.runnerUpBatch}
+                                        {achiever.winnerBatch}
                                     </div>
+
                                 </div>
                                 <div className="shape_1"></div>
                             </div>
-                        )}
-                        {achiever.secondRunnerUp === '' ? ("") : (
-                            <div className="outer">
-                                <div className="position_col">
+                            {achiever.runnerUp === '' ? ("") : (
+                                <div className="outer">
+                                    <div className="position_col"><GiPodiumSecond size={"50px"} /></div>
+                                    <div className="name_col">
+                                        <div>
+
+                                            {achiever.runnerUp}
+                                        </div>
+                                        <div style={{ fontSize: "12px" }}>
 
 
-                                    <GiPodiumThird size={"50px"} />
-                                </div>
-                                <div className="name_col">
-                                    <div>
-                                        {achiever.secondRunnerUp}
+                                            {achiever.runnerUpBatch}
+                                        </div>
                                     </div>
-                                    <div style={{ fontSize: "12px" }}>
-                                        {achiever.secondRunnerUpBatch}
-                                    </div>
+                                    <div className="shape_1"></div>
                                 </div>
-                                <div className="shape_1"></div>
-                            </div>
-                        )}
+                            )}
+                            {achiever.secondRunnerUp === '' ? ("") : (
+                                <div className="outer">
+                                    <div className="position_col">
+
+
+                                        <GiPodiumThird size={"50px"} />
+                                    </div>
+                                    <div className="name_col">
+                                        <div>
+                                            {achiever.secondRunnerUp}
+                                        </div>
+                                        <div style={{ fontSize: "12px" }}>
+                                            {achiever.secondRunnerUpBatch}
+                                        </div>
+                                    </div>
+                                    <div className="shape_1"></div>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             )}

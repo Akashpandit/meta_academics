@@ -1,4 +1,3 @@
-
  nav{
   display: flex;
   align-items: center;
@@ -31,11 +30,13 @@
 }
 
 #navbar li a:hover,
-#navbar li a.active{
+#navbars li a.active{
   color:#17cf97;
 }
 
+
 #navbar li a:hover::after,
+nav ul li.active::after,
 #navbar li a.active::after{
   content: "";
   width: 30%;
@@ -45,6 +46,7 @@
   bottom: -4px;
   left: 20px;
 }
+
 
 #mobile {
   display: none;
@@ -76,7 +78,8 @@
 
 #navbar.active{
   right: 0;
-} 
+}
+
 #navbar li{
   margin-bottom: 25px;
 }

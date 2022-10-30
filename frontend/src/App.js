@@ -20,7 +20,7 @@ import OurEvents from './components/home/OurEvents';
 import EventDetail from './components/home/EventDetail';
 import EventEdit from './components/adminPages/EventEdit';
 import Navbar from './components/home/Navbar';
-
+import Footer from './components/home/Footer';
 
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
           <Route path='/admin/events/edit/:id' element={<EventEdit />} />
         </Routes >
+        <Footer />
       </main >
     </React.Fragment >
 

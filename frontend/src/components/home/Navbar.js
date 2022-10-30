@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './nav.css';
-import { Link, renderMatches } from 'react-router-dom';
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineClose } from 'react-icons/ai'
 import metaLogo from '../../assets/LogoWithThunder.png'
@@ -18,48 +18,44 @@ class Navbar extends Component {
   render() {
     return (
 
-      <>
-        <nav>
+      <nav>
 
-          <a href="/">
-            <img src={metaLogo} alt="Meta Logo" width="150px" />
-          </a>
-          <div>
-            <ul id='navbar' className={this.state.clicked ? "#navbar active" : "navbar"}>
-              <li >
-                <a className='active' href="/">Home</a>
-              </li>
-              <li>
-                <a href="/Contact">Contact</a>
-              </li>
-              <li>
-                <a href="/AboutUs">About Us</a>
-              </li>
-              <li>
-                <a href="/OurEvents">Our Events</a>
-              </li>
-              <li>
-                <a href="/word">Word</a>
-              </li>
-            </ul>
-          </div>
-          <div id='mobile' onClick={this.handleClick}>
-            {this.state.clicked ? (
-              <i id='bar'>
-                <AiOutlineClose color='white' size={"30px"} />
-              </i>
-            ) : (
-              <i id='bar'>
-                <GiHamburgerMenu color='white' size={"30px"} />
-              </i>
+        <a href="/">
+          <img src={metaLogo} alt="Meta Logo" width="150px" />
+        </a>
 
-            )}
+        <ul id='navbar' className={this.state.clicked ? "navbar active" : "navbar"} >
 
+          <CustomLink to="/">
 
-          </div>
-        </nav>
-      </>
+            Home
+          </CustomLink>
 
+          <CustomLink to="/Contact">
+            Contact
+          </CustomLink>
+
+          <CustomLink to="/AboutUs">
+            About Us
+          </CustomLink>
+
+          <CustomLink to="/OurEvents">Our Events</CustomLink>
+          <CustomLink to="/word">Word</CustomLink>
+
+        </ul>
+
+        <div id='mobile' onClick={this.handleClick}>
+          {this.state.clicked ? (
+            <i id='bar'>
+              <AiOutlineClose color='white' size={"30px"} />
+            </i>
+          ) : (
+            <i id='bar'>
+              <GiHamburgerMenu color='white' size={"30px"} />
+            </i>
+          )}
+        </div>
+      </nav>
 
 
     )
@@ -67,3 +63,17 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+function CustomLink({ to, children, ...props }) {
+
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  )
+
+}

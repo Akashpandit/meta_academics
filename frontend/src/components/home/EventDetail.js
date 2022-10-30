@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Button } from '@mui/material'
 import AchieverComponent from './AchieverComponent';
-import { FaRegCalendarAlt } from 'react-icons/fa'
-import { AiOutlineClockCircle } from 'react-icons/ai'
-import { MdOutlineLocationOn } from 'react-icons/md'
+import { FaRegCalendarAlt } from 'react-icons/fa';
+import { AiOutlineClockCircle } from 'react-icons/ai';
+import { MdOutlineLocationOn } from 'react-icons/md';
+import './eventDetail.css';
 
 const EventDetail = () => {
     const id = localStorage.getItem("eventId");
@@ -28,6 +29,7 @@ const EventDetail = () => {
         datestr = datestr.substring(0, 10);
         //getting the day
         const d = new Date(date);
+
         datestr = d.toDateString()
         // let dayToday = d.getDay();
         // const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -49,15 +51,17 @@ const EventDetail = () => {
         <div className='event_detail_container'>
             {event && (
                 <div>
-                    <div className="header">
-                        <div>
+                    <div className="header" >
+                        <div >
                             <h1></h1>
                             <h1 style={{ color: 'white' }}>{event.name}</h1>
-
                             <div className="timing_container"
                                 style={{ color: "white", padding: '1rem', display: "flex", flexDirection: "column", gap: "1rem" }}
                             >
-                                <div><FaRegCalendarAlt size={25} /> {formatDate(event.startDate)} </div>
+                                <div>
+                                    <FaRegCalendarAlt size={25} />
+                                    {formatDate(event.startDate)}
+                                </div>
                                 <div style={{ display: "flex", gap: "2rem" }}>
                                     <div><AiOutlineClockCircle size={25} /> {tConvert(event.time)}</div>
                                     <div><MdOutlineLocationOn size={25} /> {event.venue}</div>
@@ -66,27 +70,20 @@ const EventDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="content_container"
-                        style={{ padding: "20px", textAlign: "center" }} >
-                        <img src={event.poster} alt="" style={{
-                            maxWidth: "320px",
-                            borderRadius: "10px"
-                        }} />
-                    </div>
-                    <div className="content_container"
-                        style={{ padding: "20px" }}>
-                        <h4>About</h4>
-                        <div className="event_description">
+                    <div className="event-detail-content-container">
+                        <div className="event-detail-description">
+                            <h4>About</h4>
                             {event.description}
                         </div>
-                    </div>
-                    <div className="content_container"
-                        style={{ padding: "20px" }}>
-
-                        <div className="event_description">
-                            <AchieverComponent
-                                id={event.achievers} />
+                        <div className='event-detail-img-container'>
+                            <img src={event.poster} alt="" />
                         </div>
+                    </div>
+
+                    <div className="achiever-content-container">
+                        <AchieverComponent
+                            id={event.achievers} />
+
                     </div>
 
                 </div>

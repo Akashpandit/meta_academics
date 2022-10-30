@@ -1,0 +1,104 @@
+.team-member-container{
+    height: fit-content;
+    width: 250px;
+    background-color: rgba(240, 240, 240, 0.429);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    position: relative;
+    padding: 0 1rem;
+    box-shadow: 2px 5px 5px rgb(218, 218, 218);
+}
+.member-image-container{
+    height: 200px;
+    width: 180px;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 1px 2px 5px rgb(137, 137, 137);
+    position: relative;
+    top: -2rem;
+}
+.member-image-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.meta_badge_container{
+    /* display: none; */
+    z-index: 0;
+    position: absolute;
+}
+.meta_badge_container img{
+    height: 2px;
+    width: 2px;
+}
+.member-content-container{
+    margin-top: -0.9rem;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: .1rem;
+    text-align: center;
+    /* background: white; */
+    border-radius: 5px;    
+}
+.member-name{
+    color: rgb(0, 76, 0);
+    font-size: 25px;
+    font-weight: 700;
+}
+.member-designation{
+    margin-top: -0.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.member-socials-container{
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: none;
+}
+
+.team-member-container:hover{
+    width: 320px; 
+    height: fit-content;
+    transition: 200ms ease-in-out;
+}
+
+.team-member-container:hover .member-image-container{
+    transform: scale(1.2);
+    transition: 300ms ease-in-out;
+    box-shadow: -2px 0px 15px rgb(142, 142, 142);
+}
+
+.team-member-container:hover .member-socials-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.team-member-container:hover .meta_badge_container{
+    display: inline;
+    transform: rotate(-10deg);
+    transition: 1000ms ease-in-out;
+    left: -1rem;
+    top: -1rem;
+    z-index: 5;
+}
+.team-member-container:hover .meta_badge_container img{
+    height: 55px;
+    width: 55px;
+    transition: 200ms all;
+}
+.shape-bar{
+    width: 90px;
+    height:5px;
+    background-image: linear-gradient( 10.6deg,   rgb(2, 179, 102) 100.2%,rgb(3, 87, 35) 10.2% );;
+    border-radius: 5px 5px 0 0;
+}
+

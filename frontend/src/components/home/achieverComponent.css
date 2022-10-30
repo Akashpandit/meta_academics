@@ -1,9 +1,11 @@
+
 .outer{
     display: flex;
     gap: .5rem;
-    width: 320px;
+    width: 300px;
     margin-top: 0.8rem;
     align-items: center;
+    justify-content: center;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgb(188, 188, 188);
 }
@@ -32,6 +34,18 @@
 }
 .event_detail_container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    
+
+}
+.achiever-image-container img{
+    width: 500px;
+    border-radius: 10px;
+}
+@media (max-width:500px ){
+    .achiever-image-container img{
+        width: 320px;
+    }
+    
 }

@@ -4,7 +4,11 @@ import Navbar from './Navbar.js';
 import './aboutUs2.css'
 import imageLeft from './public_Speaking3.jpeg';
 import AllTeam from './AllTeam';
-
+import whyUs1 from '../../assets/whyUsConfidence.png'
+import whyUs2 from '../../assets/expressImpress.png'
+import whyUs3 from '../../assets/whyUsLeadership.png'
+import whyUs4 from '../../assets/whyUsThreeWings.png'
+import whyUs5 from '../../assets/whyUSTechnocrat.png'
 
 const AboutUs = () => {
     return (
@@ -149,12 +153,82 @@ const AboutUs = () => {
 
                 <h1 className='row3-header'>WHY US?</h1>
 
-                <div className='left-side'>
+                <div className="why-us-outer-container">
+                    <div className="why-us-row">
+                        <div className="why-us-full-content-container">
+                            <div className="bullet-numbering">
+                                <div className="why-us-image-holder">
+                                    <img src={whyUs1} alt="" />
+                                </div>
+                            </div>
+                            <div className="why-us-content">
+                                It enhances the confidence and self esteem.
+                            </div>
+                            <div className="shape-container"></div>
+                        </div>
+
+                        <div className="why-us-full-content-container">
+                            <div className="bullet-numbering">
+                                <div className="why-us-image-holder">
+                                    <img src={whyUs2} alt="" />
+                                </div>
+                            </div>
+                            <div className="why-us-content">
+                                A place where words are spoken to express and not to only impress.
+                            </div>
+                            <div className="shape-container"></div>
+                        </div>
+                    </div>
+                    <div className="why-us-row">
+                        <div className="why-us-full-content-container">
+
+
+                            <div className="bullet-numbering">
+                                <div className="why-us-image-holder">
+                                    <img src={whyUs3} alt="" />
+                                </div>
+                            </div>
+                            <div className="why-us-content">
+                                The team which believes that everyone can be instilled with great leadership skills.
+                            </div>
+                            <div className="shape-container"></div>
+                        </div>
+                        <div className="why-us-full-content-container">
+
+
+                            <div className="bullet-numbering">
+                                <div className="why-us-image-holder">
+                                    <img src={whyUs4} alt="" />
+                                </div>
+                            </div>
+                            <div className="why-us-content">
+                                The three wings focus on the three most important skills which every leader of tomorrow needs.
+                            </div>
+                            <div className="shape-container"></div>
+                        </div>
+                    </div>
+                    <div className="why-us-row">
+                        <div className="why-us-full-content-container">
+
+
+                            <div className="bullet-numbering">
+                                <div className="why-us-image-holder">
+                                    <img src={whyUs5} alt="" />
+                                </div>
+                            </div>
+                            <div className="why-us-content">
+                                Gives the necessary exposure before opening to the technocrat world.
+                            </div>
+                            <div className="shape-container"></div>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className='left-side'>
 
                     <img src={imageLeft} />
 
-                </div>
-                <div className='right-side'>
+                </div> */}
+                {/* <div className='right-side'>
 
                     <div className='tips'>
                         <div className='num'>1</div>
@@ -167,14 +241,14 @@ const AboutUs = () => {
 
 
 
-                </div>
+                </div> */}
 
 
             </div>
-            <div className='row4-container'>
+            {/* <div className='row4-container'>
                 <h1>HEY</h1>
                 <AllTeam />
-            </div>
+            </div> */}
 
 
         </div>
