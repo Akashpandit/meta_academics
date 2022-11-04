@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import AuthLogin from './components/AuthLogin';
 import AdminHome from './components/adminPages/AdminHome';
+import Words from './components/adminPages/wordActions/Words.js';
 
 import Home from './components/home/Home.js';
 
@@ -37,15 +38,23 @@ function App() {
           <Route path='/admin/home' element={<AdminHome />} />
           <Route path='/AboutUs' element={< AboutUs />} />
 
-          <Route path='/OurEvents' element={<OurEvents />} />
-          <Route path='/eventdetail' element={<EventDetail />} />
+          <Route path='/words' element={< Words />} />
+
           <Route path='/admin/events/add' element={<AddEvent />} />
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
+        
+
+
+          <Route path='/OurEvents' element={<OurEvents />} />
+          <Route path='/eventdetail' element={<EventDetail />} />
+         
+          
           <Route path='/admin/events/edit/:id' element={<EventEdit />} />
         </Routes >
         <Footer />
       </main >
     </React.Fragment >
+
 
 
   );

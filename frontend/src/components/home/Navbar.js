@@ -6,6 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import metaLogo from '../../assets/LogoWithThunder.png'
 
 
+
 class Navbar extends Component {
 
   state = { clicked: false };

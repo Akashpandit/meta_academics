@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 import './adminhome.css'
 import Events from './Events'
-import { Box, Typography, Button } from '@mui/material'
-import Event from './Event'
+
+import { Box, Typography, Button } from '@mui/material';
 
 const AdminHome = () => {
 

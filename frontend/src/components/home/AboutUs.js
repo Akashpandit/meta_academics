@@ -250,10 +250,6 @@ const AboutUs = () => {
                 <AllTeam />
             </div> */}
 
-
-        </div>
-
-    )
 }
 
 export default AboutUs
