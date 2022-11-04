@@ -174,8 +174,8 @@ const AboutUs = () => {
             </div>
 
 
-        </div>
-<<<<<<< HEAD
+       
+
         <div className='row4-container'>
             <h1>HEY</h1>
             <AllTeam />
@@ -184,9 +184,9 @@ const AboutUs = () => {
   
     </div>
   )
-=======
-    )
->>>>>>> 95b7f0d2b87fc616a94a21e0a7a7ce5defe70225
+
+    
+
 }
 
 export default AboutUs

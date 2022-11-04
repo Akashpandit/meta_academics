@@ -20,7 +20,7 @@ const Event = ({ name, startDate, endDate, time, description, poster, venue, reg
     const handleDelete = () => { }
     function formatDate(date) {
         let datestr = date + "";
-        datestr = datestr.substring(0, 10);
+        datestr = datestr.substring(0, 10)
         //getting the day
         const d = new Date(date);
         let dayToday = d.getDay();
