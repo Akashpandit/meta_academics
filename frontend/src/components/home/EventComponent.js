@@ -18,9 +18,6 @@ const EventComponent = ({ name, startDate, endDate, time, description, poster, v
         //getting the day
         const d = new Date(date);
         datestr = d.toDateString()
-        // let dayToday = d.getDay();
-        // const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        // datestr += " ( " + weekday[dayToday] + " ) ";
         return datestr;
     }
     function tConvert(time) {
@@ -35,39 +32,43 @@ const EventComponent = ({ name, startDate, endDate, time, description, poster, v
         return time.join(''); // return adjusted time or original string
     }
     return (
-        <div className='our_event_container' style={{ marginBottom: "1rem" }}>
+        <>
+            <div className='our_event_container '
+                style={{ marginBottom: "1rem" }}>
 
-            <div class="event_component_image">
+                <div class="event_component_image">
 
-                <img src={poster} alt="event poster" />
-                <div className="image_header_footer">
+                    <img src={poster} alt="event poster" />
+                    <div className="image_header_footer">
 
+                        <div className="content_title">
+                            {name}
+                        </div>
+                        <div className="timing_container">
 
-                    <div className="content_title">
-                        {name}
+                            <div><FaRegCalendarAlt size={25} color="rgb(8, 59, 58)" /> {formatDate(startDate)} to {formatDate(endDate)}</div>
+                            <div><AiOutlineClockCircle size={25} /> {tConvert(time)}</div>
+                            <div><GrLocation size={25} /> {venue}</div>
+                        </div>
                     </div>
-                    <div className="timing_container">
 
-                        <div><FaRegCalendarAlt size={25} color="rgb(8, 59, 58)" /> {formatDate(startDate)} to {formatDate(endDate)}</div>
-                        <div><AiOutlineClockCircle size={25} /> {tConvert(time)}</div>
-                        <div><GrLocation size={25} /> {venue}</div>
-                    </div>
                 </div>
+                <div className="event_details_container">
+                    {description}
 
+                    <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' onClick={() => window.open(registrationLink, "_blank")}  >Register</Button>
+                    <Link to={"/eventdetail"} style={{ textDecoration: "none" }}>
+
+                        <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' onClick={() => {
+                            localStorage.setItem("eventName", name)
+                            localStorage.setItem("eventId", id)
+                        }} >Know More</Button>
+                    </Link>
+
+                </div>
             </div>
-            <div className="event_details_container">
-                {description}
-
-                <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' onClick={() => window.open(registrationLink, "_blank")}  >Register</Button>
-                <Link to={"/eventdetail"} style={{ textDecoration: "none" }}>
-
-                    <Button sx={{ borderRadius: 2, ml: 1, maxWidth: 'fit-content' }} variant="outlined" color='warning' onClick={() => {
-                        localStorage.setItem("eventName", name)
-                        localStorage.setItem("eventId", id)
-                    }} >Know More</Button>
-                </Link>
-            </div>
-        </div>
+            <div className="shape_1_event_component"></div>
+        </>
     )
 }
 export default EventComponent
