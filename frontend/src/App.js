@@ -42,13 +42,13 @@ function App() {
 
           <Route path='/admin/events/add' element={<AddEvent />} />
           <Route path='/admin/events/addachiever' element={<AddAchiever />} />
-        
+
 
 
           <Route path='/OurEvents' element={<OurEvents />} />
           <Route path='/eventdetail' element={<EventDetail />} />
-         
-          
+
+
           <Route path='/admin/events/edit/:id' element={<EventEdit />} />
         </Routes >
         <Footer />

@@ -31,8 +31,7 @@
     border: none;
     border-radius: 6rem;
 }
-.vertical-center {
-    
+.vertical-center {   
     margin: 0;
     position: absolute;
     top: 1%;
@@ -53,6 +52,7 @@
     align-items: flex-start;
     overflow: hidden;
     padding: 5%;
+    
 }
 
 .header-design:before
@@ -63,7 +63,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background:linear-gradient(45deg, #f802ae , #067d68);
+    /* background:linear-gradient(45deg, #f802ae , #067d68); */
+    /* background: url("../../assets/ArpitaMohanty.jpg"); */
+    /* background: url("../../assets/gradientBackground.png"); */
+    /* background-size: 1000px 1100px; */
+    background: var(--green-gradient);
+    background-size: cover;
+    background-repeat: repeat;
     border-radius: 0 0 50% 50%/0 0 100% 100%;
     transform: scaleX(1.6);
 }

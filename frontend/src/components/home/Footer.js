@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FaInstagram } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 import thunderBadge from '../../assets/thunderbadge.png';
 import './footer.css'
 const Footer = () => {
@@ -15,6 +16,9 @@ const Footer = () => {
                         <p>Stay Connected</p>
                         <a className='link' href='https://www.instagram.com/meta_academics/'>
                             <FaInstagram color="black" size={20} />
+                        </a>
+                        <a className='link' href="mailto:meta.adademics@gmail.com">
+                            <SiGmail color="black" size={20} />
                         </a>
                     </div>
                 </div>

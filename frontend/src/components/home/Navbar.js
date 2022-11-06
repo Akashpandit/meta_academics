@@ -41,7 +41,7 @@ class Navbar extends Component {
           </CustomLink>
 
           <CustomLink to="/OurEvents">Our Events</CustomLink>
-          <CustomLink to="/word">Word</CustomLink>
+          <CustomLink to="/words">Word</CustomLink>
 
         </ul>
 

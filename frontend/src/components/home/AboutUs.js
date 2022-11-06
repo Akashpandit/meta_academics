@@ -3,7 +3,7 @@ import './aboutUs.css';
 import Navbar from './Navbar.js';
 import './aboutUs2.css'
 import imageLeft from './public_Speaking3.jpeg';
-import AllTeam from './AllTeam';
+import AllTeam from './AllTeam.js';
 import whyUs1 from '../../assets/whyUsConfidence.png'
 import whyUs2 from '../../assets/expressImpress.png'
 import whyUs3 from '../../assets/whyUsLeadership.png'
@@ -223,33 +223,15 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className='left-side'>
-
-                    <img src={imageLeft} />
-
-                </div> */}
-                {/* <div className='right-side'>
-
-                    <div className='tips'>
-                        <div className='num'>1</div>
-                        <p className='info'>It enhances the confidence and self esteem.</p>
-                    </div>
-                    <div className='tips'><div className='num'>2</div><p className='info'>It enhances the confidence and self esteem.</p></div>
-                    <div className='tips'><div className='num'>3</div><p className='info'>It enhances the confidence and self esteem.</p></div>
-                    <div className='tips'><div className='num'>4</div><p className='info'>It enhances the confidence and self esteem.</p></div>
-                    <div className='tips'><div className='num'>5</div><p className='info'>It enhances the confidence and self esteem.</p></div>
-
-
-
-                </div> */}
-
-
             </div>
-            {/* <div className='row4-container'>
-                <h1>HEY</h1>
-                <AllTeam />
-            </div> */}
+            <div>
 
+                <AllTeam />
+            </div>
+        </div>
+
+
+    )
 }
 
 export default AboutUs
