@@ -1,6 +1,6 @@
 import React from 'react';
 import Word from './Word.js';
-import {Container} from '@material-ui/core';
+import {Button, Container} from '@material-ui/core';
 import useStyle from './allWordsStyles.js';
 import { Typography } from '@material-ui/core';
 import { useState, useEffect } from 'react';
@@ -25,7 +25,9 @@ const Words = () => {
 
   return (
     <>
+    
     <Typography className={classes.title} variant='h2' >WORDS OF THE WEEKS</Typography>
+    
     <Container className={classes.wordsHolder}>
       {
         words && words.map((Dict)=>{

@@ -4,6 +4,7 @@ import Navbar from './Navbar.js';
 import './aboutUs2.css'
 import imageLeft from './public_Speaking3.jpeg';
 import AllTeam from './AllTeam';
+import { Link } from 'react-router-dom';
 
 
 const AboutUs = () => {
@@ -22,20 +23,20 @@ const AboutUs = () => {
             <div class="row1-container">
                 <div class="box box-down cyan">
                     <h2 className='about-header'>Writers' Wing</h2>
-                    <p>Monitors activity to identify project roadblocks</p>
-                    <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="" />
+                    <p>Monitors activity to identify project roadblocks</p> 
+                    <Link to="/writerwing"><img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="" /></Link>
                 </div>
 
                 <div class="box red">
                     <h2 className='about-header'>SWORD</h2>
                     <p>Scans our talent network to create the optimal team for your project</p>
-                    <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" />
+                    <Link to="/sword"><img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" /></Link>  
                 </div>
 
                 <div class="box box-down blue">
                     <h2 className='about-header'>Book Lovers' Wing</h2>
                     <p>Uses data from past projects to provide better delivery estimates</p>
-                    <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
+                    <Link to="/readerwing"><img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" /></Link>
                 </div>
             </div>
 
