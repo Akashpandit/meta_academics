@@ -14,12 +14,15 @@ const Footer = () => {
                     <p>Hey, thank you for visiting our page.</p>
                     <div className="insta-container">
                         <p>Stay Connected</p>
-                        <a className='link' href='https://www.instagram.com/meta_academics/'>
-                            <FaInstagram color="black" size={20} />
-                        </a>
-                        <a className='link' href="mailto:meta.adademics@gmail.com">
-                            <SiGmail color="black" size={20} />
-                        </a>
+                        <div className="socials-container">
+
+                            <a className='link' href='https://www.instagram.com/meta_academics/'>
+                                <FaInstagram color='green' size={20} />
+                            </a>
+                            <a className='link' href="mailto:meta.adademics@gmail.com">
+                                <SiGmail color='green' size={20} />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className="footer-right-part">

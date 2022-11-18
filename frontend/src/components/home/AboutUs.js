@@ -9,12 +9,13 @@ import whyUs2 from '../../assets/expressImpress.png'
 import whyUs3 from '../../assets/whyUsLeadership.png'
 import whyUs4 from '../../assets/whyUsThreeWings.png'
 import whyUs5 from '../../assets/whyUSTechnocrat.png'
+import OurStory from './OurStory';
 
 const AboutUs = () => {
     return (
         <div className='about-body'>
 
-            <div class="header">
+            <div className="header">
                 <h1 style={{ color: 'white' }}>OUR STORY</h1>
                 <h1 style={{ color: 'white' }}>META ACADEMICS CELL</h1>
 
@@ -22,36 +23,38 @@ const AboutUs = () => {
                 <h5 style={{ color: 'white' }}>OUR WINGS</h5>
             </div>
 
-            <div class="row1-container">
-                <div class="box box-down cyan">
+            <div className="row1-container">
+                <div className="box box-down cyan">
                     <h2 className='about-header'>Writers' Wing</h2>
                     <p>Monitors activity to identify project roadblocks</p>
                     <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="" />
                 </div>
 
-                <div class="box red">
+                <div className="box red">
                     <h2 className='about-header'>SWORD</h2>
                     <p>Scans our talent network to create the optimal team for your project</p>
                     <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" />
                 </div>
 
-                <div class="box box-down blue">
+                <div className="box box-down blue">
                     <h2 className='about-header'>Book Lovers' Wing</h2>
                     <p>Uses data from past projects to provide better delivery estimates</p>
                     <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
                 </div>
             </div>
 
-            <div class="row2-container">
+            <div className="row2-container">
                 <h1 className='row2-head' >How we started?</h1>
 
-                <div class="blog-card">
-                    <div class="meta">
-                        <div class="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)" }}></div>
-                        <ul class="details">
-                            <li class="author"><a href="jfbjds">John Doe</a></li>
-                            <li class="date">Aug. 24, 2015</li>
-                            <li class="tags">
+                <OurStory />
+
+                {/* <div className="blog-card">
+                    <div className="meta">
+                        <div className="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)" }}></div>
+                        <ul className="details">
+                            <li className="author"><a href="jfbjds">John Doe</a></li>
+                            <li className="date">Aug. 24, 2015</li>
+                            <li className="tags">
                                 <ul>
                                     <li><a href="fvfg">Learn</a></li>
                                     <li><a href="dfsgdf">Code</a></li>
@@ -61,19 +64,19 @@ const AboutUs = () => {
                             </li>
                         </ul>
                     </div>
-                    <div class="description">
+                    <div className="description">
                         <h1>Formation of the Cell</h1>
                         <h2>Opening a door to the future</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
                     </div>
                 </div>
-                <div class="blog-card alt">
-                    <div class="meta">
-                        <div class="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)" }}></div>
-                        <ul class="details">
-                            <li class="author"><a href="dasv">Jane Doe</a></li>
-                            <li class="date">July. 15, 2015</li>
-                            <li class="tags">
+                <div className="blog-card alt">
+                    <div className="meta">
+                        <div className="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)" }}></div>
+                        <ul className="details">
+                            <li className="author"><a href="dasv">Jane Doe</a></li>
+                            <li className="date">July. 15, 2015</li>
+                            <li className="tags">
                                 <ul>
                                     <li><a href="dsavds">Learn</a></li>
                                     <li><a href="dvassd">Code</a></li>
@@ -82,29 +85,27 @@ const AboutUs = () => {
                             </li>
                         </ul>
                     </div>
-                    <div class="description">
+                    <div className="description">
                         <h1>Our First Event</h1>
                         <h2>Java is not the same as JavaScript</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Ad eum dolorum architecto obcaecati enim dicta praesentium,
                             quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-                        {/* <p class="read-more">
-                        <a href="fdvsdv">Read More</a>
-                    </p> */}
+                        
                     </div>
                 </div>
-                <div class="blog-card">
-                    <div class="meta">
-                        <div class="photo" style={{
+                <div className="blog-card">
+                    <div className="meta">
+                        <div className="photo" style={{
                             backgroundImage:
                                 "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"
                         }}
                         >
                         </div>
-                        <ul class="details">
-                            <li class="author"><a href="jfbjds">John Doe</a></li>
-                            <li class="date">Aug. 24, 2015</li>
-                            <li class="tags">
+                        <ul className="details">
+                            <li className="author"><a href="jfbjds">John Doe</a></li>
+                            <li className="date">Aug. 24, 2015</li>
+                            <li className="tags">
                                 <ul>
                                     <li><a href="fvfg">Learn</a></li>
                                     <li><a href="dfsgdf">Code</a></li>
@@ -114,20 +115,20 @@ const AboutUs = () => {
                             </li>
                         </ul>
                     </div>
-                    <div class="description">
+                    <div className="description">
                         <h1>Open Mic 1.0</h1>
                         <h2>Opening a door to the future</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
                     </div>
                 </div>
 
-                <div class="blog-card alt">
-                    <div class="meta">
-                        <div class="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)" }}></div>
-                        <ul class="details">
-                            <li class="author"><a href="dasv">Jane Doe</a></li>
-                            <li class="date">July. 15, 2015</li>
-                            <li class="tags">
+                <div className="blog-card alt">
+                    <div className="meta">
+                        <div className="photo" style={{ backgroundImage: "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)" }}></div>
+                        <ul className="details">
+                            <li className="author"><a href="dasv">Jane Doe</a></li>
+                            <li className="date">July. 15, 2015</li>
+                            <li className="tags">
                                 <ul>
                                     <li><a href="dsavds">Learn</a></li>
                                     <li><a href="dvassd">Code</a></li>
@@ -136,15 +137,13 @@ const AboutUs = () => {
                             </li>
                         </ul>
                     </div>
-                    <div class="description">
+                    <div className="description">
                         <h1>Foundation of MUN</h1>
                         <h2>Java is not the same as JavaScript</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-                        {/* <p class="read-more">
-                        <a href="fdvsdv">Read More</a>
-                    </p> */}
+                       
                     </div>
-                </div>
+                </div> */}
 
 
             </div>

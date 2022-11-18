@@ -65,9 +65,8 @@
     height: 100%;
     /* background:linear-gradient(45deg, #f802ae , #067d68); */
     /* background: url("../../assets/ArpitaMohanty.jpg"); */
-    /* background: url("../../assets/gradientBackground.png"); */
     /* background-size: 1000px 1100px; */
-    background: var(--green-gradient);
+    background: var(--dark-green-gradient);
     background-size: cover;
     background-repeat: repeat;
     border-radius: 0 0 50% 50%/0 0 100% 100%;

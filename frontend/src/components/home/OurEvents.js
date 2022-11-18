@@ -47,7 +47,9 @@ const OurEvents = () => {
                 </div>
             ) : (
                 <div className="events_container"
-                    style={{ backgroundColor: "rgb(214, 255, 226)" }}>
+                    style={{
+                        backgroundColor: "rgb(214, 255, 226)",
+                    }}>
                     {events &&
                         events.map((event, index) => (
                             <EventComponent

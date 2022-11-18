@@ -32,9 +32,14 @@
     line-height: 0px;
     padding-top: 0.5rem;
 }
+.socials-container{
+    display: flex;
+    gap: 0.5rem;
+}
 .insta-container:hover a{
-    background-color: green;
-    width: fit-content;
+   box-shadow: 1px 1px 5px black;
+   padding: 2px;
+   border-radius: 0.1rem;
 }
 .footer-shape-container{
     height: 80%;
@@ -64,6 +69,7 @@
     box-shadow: -3px 1px 15px rgb(36, 36, 36);
     /* transform: scale(0.1); */
 }
+
 .footer-right-part-shape{
     /* width: 550px;
     height: 250px;

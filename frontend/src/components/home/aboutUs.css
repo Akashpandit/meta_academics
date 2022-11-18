@@ -85,6 +85,7 @@ h1:first-of-type {
     background-color:rgb(8, 59, 58);
     padding: 2rem;
     text-align: center;
+    height: 100vh;
 }
 
 .row2-head{

@@ -31,10 +31,14 @@ const EventComponent = ({ name, startDate, endDate, time, description, poster, v
         }
         return time.join(''); // return adjusted time or original string
     }
+    var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     return (
         <>
             <div className='our_event_container '
-                style={{ marginBottom: "1rem" }}>
+                style={{
+                    marginBottom: "1rem",
+                    // backgroundColor: randomColor 
+                }}>
 
                 <div class="event_component_image">
 
@@ -67,7 +71,9 @@ const EventComponent = ({ name, startDate, endDate, time, description, poster, v
 
                 </div>
             </div>
-            <div className="shape_1_event_component"></div>
+            <div className="shape_1_event_component"
+            // style={{ backgroundColor: randomColor }}
+            ></div>
         </>
     )
 }
