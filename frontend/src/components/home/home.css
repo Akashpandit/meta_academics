@@ -8,7 +8,18 @@
     padding: 0;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.bodyContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.bodyContainer {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .btn-container{
+  margin-top: 2rem;
     height:10px;
     position: relative;
 }
@@ -35,10 +46,13 @@
 {
     position: relative;
     width: 100%;
+    height: 500px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
     overflow: hidden;
+    padding: 5%;
 }
 
 .header-design:before
@@ -51,14 +65,13 @@
     height: 100%;
     background:linear-gradient(45deg, #f802ae , #067d68);
     border-radius: 0 0 50% 50%/0 0 100% 100%;
-    transform: scaleX(1.2);
+    transform: scaleX(1.6);
 }
 
 .header-design .content
 {
     position:relative;
     z-index: 1;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -90,40 +103,36 @@
 /* FOOD FOR THOUGHT */
 
 .food-for-thought{
-    position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #0e3f37;
-    height: 100%;
     padding: 40px;
 }
-.food-for-thought h1{
-    margin: auto;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #0e3f37;
-    text-align: center;
-    margin: 2rem;
-    
-}
-.event-poster{
-    width: 50%;
-    height: 300px;
-    margin: 1rem 2rem;
-    background-size: cover;
-    float: left;
-}
 
+.fft-img-container img{
+    width:300px;
+    object-fit: cover;
+}
+.fft-content-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .FT-details{
-    margin: 3rem 2rem; 
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Past Events */
 
 .past-events{
     position: relative;
-    display: block;
+    /* display: block; */
     color: var(--light-text);
     background:linear-gradient(45deg, #f802ae , #067d68);;
     margin-top: 8rem;
@@ -138,12 +147,10 @@
     color: var(--bg-color);
     text-align: center;
     margin: 2rem;
-    
 }
 
 .slider{
     position: relative;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,8 +164,8 @@
 
 .right-arrow{
     position: absolute;
-    right: 32px;
-    top: 50%;
+    right: -1rem;
+    top: 150px;
     transform: translateY(-50%);
     font-size: 2rem;
     color: var(--light-text);
@@ -170,8 +177,9 @@
 
 .left-arrow{
     position: absolute;
-    left: 32px;
-    top: 50%;
+
+    left: -1rem;
+    top: 150px;
     transform: translateY(-50%);
     font-size: 2rem;
     color: var(--light-text);
@@ -182,12 +190,12 @@
 
 .slide{
     opacity: 1;
-    transition-duration: 1s ease;
+    transition-duration: 1s ease-in-out;
 }
 
 .slide .active{
     opacity: 1;
-    transition-duration: 1s ease;
+    transition-duration: 1s ease-in-out;
     transform: scale(1.08);
 }
 
@@ -195,8 +203,17 @@
 
 .our-team{
     margin-top: 5rem;
+    margin: 0 auto;
+    align-items: center;
 }
-
+.team-members-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  flex-wrap: wrap;
+  min-height: 420px;
+}
 .team-heading{
     text-align: center;
     margin: 2rem;
@@ -208,13 +225,15 @@
 /* OUR ALUMNI */
 
 .alumni-container{
-   background:linear-gradient(45deg, #067d68, #f802ae );
+   /* background:linear-gradient(45deg, #067d68, #f802ae ); */
+   background:var(--green-gradient);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
     padding-top: 20px;
+  
     color: whitesmoke;
 }
 .alumni{
@@ -223,7 +242,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     color: var(--light-text);
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 20px;
 }
 
@@ -335,3 +354,18 @@ figure {
     color: var(--light-text);
     text-decoration: none;
   }
+
+
+@media screen and (max-width:500px) {
+
+  .header-design{
+    height: 75vh;
+   
+  }
+  .header-design::before{
+    transform: scaleX(2.2);
+  }
+  .team-members-container{
+    margin-bottom: 3rem;
+  }
+}

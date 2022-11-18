@@ -43,7 +43,7 @@ const Events = () => {
                         meetingLink={event.meetingLink}
 
                     />
-                ))
+                )).reverse()
             }
         </div>
     )

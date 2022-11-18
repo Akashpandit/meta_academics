@@ -48,7 +48,7 @@ const EventEdit = () => {
     }, [])
     const sendRequest = async () => {
         const res = await axios
-            .put(`${process.env.REACT_APP_BASEURL}/api/event / edit / ${id}`)
+            .put(`${process.env.REACT_APP_BASEURL}/api/event/edit/${id}`)
 
     }
     const handleSubmit = (e) => {
