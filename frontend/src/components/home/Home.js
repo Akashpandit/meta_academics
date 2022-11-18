@@ -1,11 +1,9 @@
 import React from 'react'
 import './home.css';
-import Navbar from './Navbar';
 import upEvent from "../home/mic.jpg";
 import ImgSilder from './ImgSilder.js';
 import { SliderData } from './sliderData.js';
 import Team from './Team';
-import Footer from './Footer';
 import TeamMemberComponent from './TeamMemberComponent';
 import AkashImage from '../../assets/AkashPandit.jpg';
 import ArpitaImage from '../../assets/ArpitaMohanty.jpg';
@@ -64,14 +62,14 @@ const Home = () => {
               memberName="Arpita Mohanty"
               memberImage={ArpitaImage}
               memberDesignation="Executive Secretary" />
+
+          </div>
+          <div className="team-members-container">
             <TeamMemberComponent
               memberName="Geetansa"
               memberDesignation="4th Yr Co-ordinator"
               memberImage={GeetansaImage}
             />
-          </div>
-          <div className="team-members-container">
-
             <TeamMemberComponent
               memberName="R Avinash Prasad"
               memberDesignation="4th Yr Co-ordinator"
